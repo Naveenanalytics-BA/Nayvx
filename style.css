@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+  background: #0d1b2a;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* /* Hero Brand Name Styling */
+.brand-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 64px;
+  color: #4da8da;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #4da8da, 0 0 20px #0077b6, 0 0 30px #0077b6;
+  animation: glowText 2.5s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glowText {
+  0% {
+    color: #4da8da;
+    text-shadow: 0 0 5px #4da8da, 0 0 10px #4da8da, 0 0 20px #4da8da;
+  }
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #0077b6, 0 0 30px #0077b6;
+  }
+}
+
+/* Adjust Typewriter Text Size */
+#typewriter {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7f9;
+  color: #333;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background: #0d1b2a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: #023e8a;
+}
+
+#features, #gallery, #testimonials, #contact, #counter-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature {
+  background: #fff;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease-in-out;
+}
+
+.feature img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-img {
+  width: 250px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+blockquote {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  width: 60%;
+  color: #555;
+}
+
+form input, form textarea {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 20px;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+}
+
+form button:hover {
+  background: #023e8a;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #0d1b2a;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+#typewriter {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+button.animate-pulse {
+  animation: pulse 0.6s infinite;
+}
+
+@media (max-width: 768px) {
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-img {
+    width: 90%;
+  }
+
+  form input, form textarea {
+    width: 90%;
+  }
+
+  blockquote {
+    width: 90%;
+  }
+}
